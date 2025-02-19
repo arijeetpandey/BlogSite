@@ -1,0 +1,46 @@
+.article {
+    background: hsl(220, 16%, 96%);
+    margin-top: 5rem;
+    padding-top: 3rem;
+}
+.cards--wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: 4rem;
+}
+.article--heading {
+    text-align: center;
+}
+
+.card {
+    justify-self: center;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    border: 1px solid hsl(233, 8%, 62%);
+    overflow: hidden;
+    transition: all .25s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 17px 4px;
+    border: none;
+}
+
+.card--author{
+    font-size: .875rem;
+    padding-left: 1.5rem;
+}
+.card-image {
+    flex: 1;
+}
+.card-image img {
+    height: 90%;
+    width: 100%;
+}
+
+.card-text {
+    padding: 1rem 1.5rem 1.5rem;
+}

@@ -1,0 +1,33 @@
+@media screen and (max-width: 40em) {
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo h1 {
+        margin-bottom: 0.5rem;
+    }
+    .footer--wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+    .footer--copyright {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 64em) {
+    .hero--text {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .sub--input {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 87.5em) {
+    .sub--input a {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}

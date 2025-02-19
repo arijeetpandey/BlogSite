@@ -1,0 +1,43 @@
+.header {
+    background-color: #FFF2F2;
+    box-shadow: 0 1px 5px -2px hsl(0, 0%, 13%);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.navbar {
+    width: 85%;
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+    user-select: none;
+}
+.logo h1 {
+   font-size: 2rem;
+   color: #2D336B;
+}
+
+.links {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+}
+
+.links a {
+    font-size: 1.125rem;
+    color: #7886C7;
+    transition: color 0.25s ease-in-out;
+}
+.links a:hover {
+    color: #2D336B;
+    
+}
+
+.links a:not(:last-child) {
+    margin-right: 3rem;
+}
