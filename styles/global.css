@@ -18,7 +18,7 @@ body {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     line-height: 1.3;
-    color: #7886C7;
+    color: #76fa03;
 }
 
 a,
@@ -34,17 +34,21 @@ h3 {
 }
 h1 {
     font-size: 2rem;
-    color: #2D336B;
+    color: #eb470b;
 }
 
 h2 {
-    color: #2D336B;
+    color: #2ef806;
     font-size: 1.5rem;
 }
 
 .container {
     max-width: 82.875rem;
     margin: 0 auto;
+}
+.container:hover{
+     opacity: 1;
+    animation: glow 1s infinite alternate;     
 }
 
 .line-up{
@@ -53,7 +57,7 @@ h2 {
 }
 
 .container--py {
-    padding-block: 1.25rem;
+    padding-block: 2.25rem;
 }
 
 .button {
@@ -83,4 +87,13 @@ h2 {
 }
 .button:hover::before {
     opacity: 1;
+    animation: glow 1s infinite alternate; 
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 0 ; 
+  }
+  to {
+    box-shadow: 0 0 50px rgb(95, 85, 192); 
+  }
 }

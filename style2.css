@@ -1,0 +1,440 @@
+.article {
+    background: hsl(220, 16%, 96%);
+    margin-top: 5rem;
+    padding-top: 3rem;
+}
+.cards--wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: 4rem;
+}
+.article--heading {
+    text-align: center;
+    text-shadow: 3px 4px 5px rgb(49, 70, 161);
+}
+
+.card {
+    justify-self: center;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    border: 1px solid hsl(233, 8%, 62%);
+    overflow: hidden;
+    transition: all .25s ease-in-out;
+    animation: appear linear ;
+    animation-timeline: view();
+    animation-range: entry 0%  cover 30%;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px) ;
+    }
+
+}
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 17px 4px;
+    border: none;
+}
+
+.card--author{
+    font-size: .875rem;
+    padding-left: 1.5rem;
+}
+.card-image {
+    flex: 1;
+}
+.card-image img {
+    height: 90%;
+    width: 100%;
+}
+
+.card-text {
+    padding: 1rem 1.5rem 1.5rem;
+}
+.footer {
+    background: #2D336B;
+}
+
+.footer--wrapper {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: end;
+    gap: 2rem;
+}
+
+.footer--sub {
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.sub--input {
+    min-width: 100%;
+}
+.sub--input button {
+    padding: .75rem 1.875rem;
+    background: #7886C7;
+    margin-left: 1rem;
+}
+.sub--input a {
+    color: #FFF2F2;
+    font-size: 1rem;
+}
+.sub--input input {
+    width: 100%;
+    height: 2.55rem;
+    max-width: 50%;
+    border: none;
+    outline: none;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-block: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.footer--copyright{
+    justify-self: end;
+    font-size: .875rem;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.3;
+    color: #5a6bb8;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+h1 {
+    font-size: 2rem;
+    color: #2D336B;
+}
+
+h2 {
+    color: #2D336B;
+    font-size: 1.5rem;
+}
+
+.container {
+    max-width: 82.875rem;
+    margin: 0 auto;
+}
+
+.line-up{
+    width: 80%;
+    padding-block: 6.1969rem;
+}
+
+.container--py {
+    padding-block: 2.25rem;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 0.875rem 2.25rem;
+    background: #2D336B;
+    border-radius: 2rem;
+    color: #FFF2F2;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(255, 255, 255, 0.15);
+    border-radius: 2rem;
+    transition: opacity .25s ease-in-out;
+    opacity: 0;
+}
+.button:hover::before {
+    opacity: 1;
+    animation: glow 1s infinite alternate; 
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 0 ; 
+  }
+  to {
+    box-shadow: 0 0 50px rgb(106, 139, 239); 
+  }
+}
+.hero{
+    position: relative;
+    top: 5.0994rem;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-image: url('https://cdn.pixabay.com/photo/2015/11/06/13/25/blog-1027861_640.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.hero--text {
+    width: 60%;
+}
+.hero--text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 3px 4px 5px rgb(49, 70, 161);
+}
+.hero--text p {
+    margin-bottom: 2rem;
+    color: #7886C7;
+}
+@import "global.css";
+@import "navbar.css";
+@import "hero.css";
+@import "card.css";
+@import "post.css";
+@import "footer.css";
+@import "responsive.css";
+.header {
+    background-color: #fcfbfb;
+    box-shadow: 0 1px 5px -2px hsl(0, 0%, 13%);
+    position: fixed;
+    width: 100%;
+    z-index: 2;    
+}
+.navbar {
+    width: 100%;
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(243, 241, 241);
+}    
+
+.logo {
+    flex: 1;
+    user-select: none;
+}
+.logo:hover{
+    display: inline-block;
+  animation:  bounce 0.6s ease 4 alternate; 
+
+}
+
+@keyframes bounce {
+   0% {
+      text-shadow:
+                  0 5px 0 #ccc,
+                  0 2px 3px rgba(0, 0, 0, 1);  
+  }
+  100% {
+    transform:translateY(-20px);
+    text-shadow:  0 50px 0 black,
+                  0 0px 20px rgba(0, 0, 0, .8);
+  }
+
+}
+.logo h1 {
+   font-size: 2rem;
+   color: #2D336B;
+   text-shadow: 5px 3px 6px rgb(49, 70, 161);
+}
+
+.links {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    text-decoration: underline;
+    text-decoration-color: rgb(5, 5, 231);
+}
+
+.links a {
+    font-size: 1.125rem;
+    color: #7886C7;
+    transition: color 0.25s ease-in-out;
+}
+.links a:hover {
+    color: #061ded;
+    background: 0;
+    border-radius: 15px;
+    color: #3809f8;
+    animation: pulse-glow 2s infinite alternate;
+}
+.links a:not(:last-child) {
+    margin-right: 3rem;
+    
+}
+@keyframes pulse-glow {
+    0% {
+        text-shadow: 0 0 5px rgba(248, 248, 248, 0.8),0 0 10px  #190ef5;
+    }
+    100% {
+        text-shadow: 0 0 7px rgba(252, 252, 252, 0.8),0 0 15px  #2904f8;
+    }
+}
+  
+.blog {
+    padding-block: 5.0625rem;
+    background: hsl(0, 0%, 98%);
+}
+.blog--wrapper {
+    width: 80%;
+}
+.blog--head {
+    text-align: center;
+}
+.blog--head h1{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+}
+.author--info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background: hsl(220, 16%, 96%);
+}
+.author--info img {
+    margin-right: 1rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.blog--image img {
+    width: 100%;
+    height: 31.5rem;
+}
+.blog--image figcaption{
+    text-align: end;
+}
+.blog--text {
+    line-height: 1.4;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.blog--text > p:first-child::first-letter {
+    font-size: 3rem;
+    padding-right: 0.3rem;
+}
+.blog--text h2{
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding-top: 2rem;
+}
+.blog--text h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.blog--text span {
+    color: hsl(136, 65%, 51%);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.blog--text q {
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.thanks {
+    color: hsl(136, 65%, 51%);
+    margin-block: 1rem;
+}
+.share {
+    display: flex;
+    align-items: center;
+}
+.share img {
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.quote {
+    padding: 1rem;
+    font-size: 1.375rem;
+    font-style: italic;
+    border-left: 5px solid hsl(136, 65%, 51%);
+    background: hsl(220, 16%, 96%);
+}
+.quote p::before{
+    content: open-quote;
+    font-size: 1.5rem;
+}
+.quote p::after{
+    content: close-quote;
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 40em) {
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo h1 {
+        margin-bottom: 0.5rem;
+    }
+    .footer--wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+    .footer--copyright {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 64em) {
+    .hero--text {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .sub--input {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 87.5em) {
+    .sub--input a {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}

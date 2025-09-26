@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    background: hsl(220, 16%, 96%);
+    background: hsl(220, 8%, 93%);
 }
 .author--info img {
     margin-right: 1rem;
@@ -52,7 +52,7 @@
     font-weight: 600;
 }
 .blog--text span {
-    color: hsl(136, 65%, 51%);
+    color: hsl(87, 96%, 50%);
     text-decoration: underline;
     cursor: pointer;
 }

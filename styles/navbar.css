@@ -1,17 +1,18 @@
 .header {
-    background-color: #ffffff;
+    background-color: #f8f7f4;
     box-shadow: 0 1px 5px -2px hsl(0, 0%, 13%);
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 2;    
 }
 .navbar {
-    width: 85%;
+    width: 100%;
     padding-inline: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    background-color: rgb(216, 213, 213);
+}    
 
 .logo {
     flex: 1;
@@ -19,13 +20,15 @@
 }
 .logo h1 {
    font-size: 2rem;
-   color: #2D336B;
+   color: #f2ea0b;
 }
 
 .links {
     flex: 1;
     display: flex;
     justify-content: end;
+    text-decoration: underline;
+    text-decoration-color: rgb(10, 5, 248);
 }
 
 .links a {
@@ -34,10 +37,9 @@
     transition: color 0.25s ease-in-out;
 }
 .links a:hover {
-    color: #2D336B;
-    
+    color: #656ee6;
 }
-
 .links a:not(:last-child) {
     margin-right: 3rem;
+    
 }

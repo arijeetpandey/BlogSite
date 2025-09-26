@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Blog Site</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* Blog Grid */
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1200px;
+      perspective: 1500px; /* enables 3D */
+    }
+
+    /* Blog Card */
+    .blog-card {
+      background: #0f3460;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+      transition: transform 0.6s ease, box-shadow 0.4s ease;
+      transform-style: preserve-3d;
+    }
+    .blog-card:hover {
+      transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+    }
+
+    /* Image */
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Content */
+    .blog-content {
+      padding: 20px;
+    }
+    .blog-content h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+    .blog-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #ddd;
+    }
+    .blog-content a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .blog-content a:hover {
+      background: #ffaa00;
+      transform: translateY(-3px);
+    }
+    #arijeet{
+      color: #ffaa00;
+    }
+    #explore{
+      color: red;
+    }
+    #remote{
+      color: chartreuse;
+    }
+  </style>
+</head>
+<body>
+  <h1>My 3D Blog</h1>
+  
+  <div class="blog-container">
+    <!-- Blog Card 1 -->
+    <div class="blog-card">
+      <img src="https://picsum.photos/600/400?random=1" alt="Blog 1">
+      <div class="blog-content">
+        <h2 id="explore">Exploring the Future of Web</h2>
+        <p>Discover the latest trends in web development, from AI integration to immersive 3D user experiences.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="blog-card">
+      <img src="https://picsum.photos/600/400?random=2" alt="Blog 2">
+      <div class="blog-content">
+        <h2>Designing with Creativity</h2>
+        <p>Learn how to balance design aesthetics with usability to create websites that truly stand out.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+    <div id="arijeet">
+      hello i am arijeet pandey kya hall hay tere
+    </div>
+  
+
+    <!-- Blog Card 3 -->
+    <div class="blog-card">
+      <img src="https://picsum.photos/600/400?random=3" alt="Blog 3">
+      <div class="blog-content">
+        <h2>Mastering CSS Animations</h2>
+        <p>Step up your CSS skills by mastering transitions, keyframes, and mind-blowing 3D animations.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
