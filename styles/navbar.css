@@ -26,6 +26,8 @@
     flex: 1;
     display: flex;
     justify-content: end;
+    text-decoration: underline;
+    text-decoration-color: #7886C7;
 }
 
 .links a {
@@ -34,10 +36,20 @@
     transition: color 0.25s ease-in-out;
 }
 .links a:hover {
-    color: #2D336B;
-    
+    color: #212faf;
+    animation: pulse-glow 2s infinite alternate;
 }
 
 .links a:not(:last-child) {
     margin-right: 3rem;
+}
+
+
+@keyframes pulse-glow {
+    0% {
+        text-shadow: 0 0 5px rgba(248, 248, 248, 0.8),0 0 10px  #4057bd;
+    }
+    100% {
+        text-shadow: 0 0 7px rgba(252, 252, 252, 0.8),0 0 15px  #2744c6;
+    }
 }
