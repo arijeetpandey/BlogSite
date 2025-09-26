@@ -81,6 +81,32 @@ h2 {
     transition: opacity .25s ease-in-out;
     opacity: 0;
 }
-.button:hover::before {
+.button.btn-glow:hover::before {
     opacity: 1;
+    animation: glow 1s infinite alternate; 
+}
+
+.button.btn-red {
+    background: #951313;
+}
+.button.btn-red:hover::before {
+    opacity: 1;
+    animation: glow-red 1s infinite alternate; 
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 0 ; 
+  }
+  to {
+    box-shadow: 0 0 20px rgb(95, 85, 192); 
+  }
+}
+@keyframes glow-red {
+  from {
+    box-shadow: 0 0 0 ; 
+  }
+  to {
+    box-shadow: 0 0 20px #7f0200; 
+  }
 }
